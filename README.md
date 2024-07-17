@@ -1,1 +1,1 @@
-Please go to [lukestein.com](https://lukestein.com)
+Please go to [lukestein.com](http://lukestein.com)
