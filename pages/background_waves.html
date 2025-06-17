@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Waves with Color Shift & Glow</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background: #0a0a0f;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<canvas id="waves"></canvas>
+<script>
+  const canvas = document.getElementById('waves');
+  const ctx = canvas.getContext('2d');
+
+  let width, height;
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  class Wave {
+    constructor(options) {
+      Object.assign(this, options);
+    }
+
+    getDynamicColor(timeSec) {
+      const hue = (this.baseHue + Math.sin(timeSec * this.hueSpeed + this.offset) * this.hueRange) % 360;
+      return `hsla(${hue}, 60%, 60%, ${this.alpha})`;
+    }
+
+    draw(time) {
+      const timeSec = time / 1000;
+      const yOffset = this.baseYOffset + Math.sin(timeSec * this.verticalOscillationSpeed + this.offset) * this.verticalOscillationRange;
+
+      ctx.beginPath();
+      ctx.moveTo(0, height);
+
+      for (let x = 0; x <= width; x++) {
+        const y = yOffset + Math.sin(x * this.frequency + timeSec * this.speed + this.offset) * this.baseAmplitude;
+        ctx.lineTo(x, y);
+      }
+
+      ctx.lineTo(width, height);
+      ctx.closePath();
+
+      // Glow
+      ctx.shadowBlur = this.glowBlur;
+      ctx.shadowColor = this.getDynamicColor(timeSec);
+      ctx.fillStyle = this.getDynamicColor(timeSec);
+      ctx.fill();
+
+      // Reset shadow to avoid affecting next wave
+      ctx.shadowBlur = 0;
+      ctx.shadowColor = 'transparent';
+    }
+  }
+
+  const waves = [
+    new Wave({
+      baseHue: 220, hueRange: 30, hueSpeed: 0.4, alpha: 0.4,
+      glowBlur: 15,
+      baseAmplitude: 50, frequency: 0.008, speed: 0.7, offset: 0,
+      baseYOffset: height * 0.8, verticalOscillationSpeed: 0.7, verticalOscillationRange: 15
+    }),
+    new Wave({
+      baseHue: 260, hueRange: 40, hueSpeed: 0.3, alpha: 0.5,
+      glowBlur: 25,
+      baseAmplitude: 70, frequency: 0.006, speed: 0.5, offset: 2,
+      baseYOffset: height * 0.85, verticalOscillationSpeed: 0.5, verticalOscillationRange: 40
+    }),
+    new Wave({
+      baseHue: 280, hueRange: 50, hueSpeed: 0.2, alpha: 0.6,
+      glowBlur: 35,
+      baseAmplitude: 90, frequency: 0.004, speed: 0.4, offset: 6,
+      baseYOffset: height * 0.9, verticalOscillationSpeed: 0.9, verticalOscillationRange: 25
+    }),
+  ];
+
+  function animate(time) {
+    ctx.clearRect(0, 0, width, height);
+    waves.forEach(wave => wave.draw(time));
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+</script>
+</body>
+</html>
