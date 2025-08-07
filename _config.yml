@@ -1,0 +1,3 @@
+# Allow serving raw HTML from /pages/
+include:
+  - pages
