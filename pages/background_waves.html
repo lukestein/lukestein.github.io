@@ -88,6 +88,40 @@
     }),
   ];
 
+/*   const waves = [
+    new Wave({
+      baseHue: 140, hueRange: 10, hueSpeed: 0.3, alpha: 0.4, // Babson Green
+      glowBlur: 60,
+      baseAmplitude: 50, frequency: 0.008, speed: 0.7, offset: 0,
+      baseYOffset: height * 0.8, verticalOscillationSpeed: 0.7, verticalOscillationRange: 15
+    }),
+    new Wave({
+      baseHue: 210, hueRange: 15, hueSpeed: 0.25, alpha: 0.5, // Sky Blue
+      glowBlur: 70,
+      baseAmplitude: 70, frequency: 0.006, speed: 0.5, offset: 2,
+      baseYOffset: height * 0.85, verticalOscillationSpeed: 0.5, verticalOscillationRange: 40
+    }),
+    new Wave({
+      baseHue: 40, hueRange: 10, hueSpeed: 0.2, alpha: 0.6, // Gold
+      glowBlur: 80,
+      baseAmplitude: 90, frequency: 0.004, speed: 0.4, offset: 6,
+      baseYOffset: height * 0.9, verticalOscillationSpeed: 0.9, verticalOscillationRange: 25
+    }),
+    new Wave({
+      baseHue: 275, hueRange: 12, hueSpeed: 0.3, alpha: 0.4, // Purple
+      glowBlur: 65,
+      baseAmplitude: 80, frequency: 0.005, speed: 0.6, offset: 4,
+      baseYOffset: height * 0.87, verticalOscillationSpeed: 0.6, verticalOscillationRange: 30
+    }),
+    new Wave({
+      baseHue: 20, hueRange: 12, hueSpeed: 0.22, alpha: 0.5, // Coral
+      glowBlur: 75,
+      baseAmplitude: 65, frequency: 0.007, speed: 0.8, offset: 1,
+      baseYOffset: height * 0.83, verticalOscillationSpeed: 0.4, verticalOscillationRange: 20
+    }),
+  ]; */
+
+
   function animate(time) {
     ctx.clearRect(0, 0, width, height);
     waves.forEach(wave => wave.draw(time));
