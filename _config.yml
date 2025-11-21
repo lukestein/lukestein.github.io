@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Luke C.D. Stein / Babson College"
+title                    : "Luke Stein / Babson College"
 title_separator          : "-"
-name                     : &name "Luke Stein"
+name                     : &name "Luke C.D. Stein"
 description              : &description "Luke Stein's homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://lukestein.github.io  # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                         # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -23,11 +23,11 @@ repository               : "lukestein/lukestein.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Luke Stein"
   pronouns         : # example: "she/her"  
-  bio              : "Assistant Professor of Finance at Babson College"
-  location         : "Babson Park, MA"
+  bio              : "Assistant Professor of Finance, Babson College"
+  location         : #"Wellesley, MA"
   employer         : "Babson College"
   uri              : # URL
   email            : "lcdstein@babson.edu" 
@@ -54,7 +54,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "lukestein.com" # Replace this with you Bluesky username
+  #bluesky          : "lukestein.com" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -84,7 +84,9 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Refereed Publications and Accepted Papers'
+  workingpapers:
+    title: 'Working Papers'    
   conferences:
     title: 'Conference Papers'
 
@@ -93,7 +95,7 @@ teaser                   :  # filename of teaser fallback teaser image placed in
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts "disabled" "enabled"
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -104,7 +106,7 @@ comments:
   facebook:
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : "dark" # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -244,7 +246,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: false
       related: true
   # _pages
   - scope:
@@ -260,7 +262,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
   # _publications
   - scope:
@@ -269,7 +271,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
   # _portfolio
   - scope:
@@ -278,7 +280,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comment: true
   # _talks
   - scope:
@@ -287,7 +289,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
-      share: true
+      share: false
 
 
 # Sass/SCSS
