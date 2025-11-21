@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Luke Stein / Babson College"
 title_separator          : "-"
-name                     : &name "Luke C.D. Stein"
+name                     : &name "Luke Stein"
 description              : &description "Luke Stein's homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://lukestein.github.io  # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                         # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -24,9 +24,9 @@ repository               : "lukestein/lukestein.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Luke Stein"
+  name             : "Luke C.D. Stein"
   pronouns         : # example: "she/her"  
-  bio              : "Assistant Professor of Finance, Babson College"
+  bio              : "Assistant Professor of Finance"
   location         : #"Wellesley, MA"
   employer         : "Babson College"
   uri              : # URL
@@ -106,7 +106,7 @@ comments:
   facebook:
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : "dark" # "light" (default), "dark"
+    colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
