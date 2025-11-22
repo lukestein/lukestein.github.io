@@ -26,9 +26,9 @@ author:
   avatar           : "profile.jpg"
   name             : "Luke C.D. Stein"
   pronouns         : # example: "she/her"  
-  bio              : "Assistant Professor of Finance"
-  location         : #"Wellesley, MA"
-  employer         : "Babson College"
+  bio              : "Assistant Professor of Finance, Babson College"
+  location         : "Wellesley, MA, USA"
+  employer         : #"Babson College"
   uri              : # URL
   email            : "lcdstein@babson.edu" 
 
