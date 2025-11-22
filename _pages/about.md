@@ -22,3 +22,29 @@ Former strategy consultant for Bain & Company in New York and Tokyo.
 > 320 Tomasso Hall  
 > 231 Forest Street  
 > Babson Park, MA 02457
+
+---
+
+## Research
+
+{% include base_path %}
+
+{% if site.publication_category %}
+{% for category in site.publication_category  %}
+{% assign title_shown = false %}
+{% for post in site.publications reversed %}
+{% if post.category != category[0] %}
+{% continue %}
+{% endif %}
+{% unless title_shown %}
+### {{ category[1].title }}
+{% assign title_shown = true %}
+{% endunless %}
+{% include archive-single-compact.html %}
+{% endfor %}
+{% endfor %}
+{% else %}
+{% for post in site.publications reversed %}
+{% include archive-single-compact.html %}
+{% endfor %}
+{% endif %}
