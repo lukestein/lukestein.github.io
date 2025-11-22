@@ -1,0 +1,29 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<li class="archive__item" style="margin-bottom: 0.85em; line-height: 1.4;">
+  <div style="margin-bottom: 0.1em;">
+    {% if post.link %}
+      <a href="{{ post.link }}" style="text-decoration: none; font-weight: 700;">{{ title }}</a>
+    {% else %}
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="text-decoration: none; font-weight: 700;">{{ title }}</a>
+    {% endif %}
+  </div>
+
+  {% if post.venue and post.category != 'workingpapers' %}
+    <div style="font-style: italic; opacity: 0.85; margin-bottom: 0.1em;">
+      {{ post.venue }}
+    </div>
+  {% endif %}
+
+  {% if post.citation %}
+    <div style="font-size: 0.75em; opacity: 0.7;">
+      {{ post.citation }}
+    </div>
+  {% endif %}
+</li>

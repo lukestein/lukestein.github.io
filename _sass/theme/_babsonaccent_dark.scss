@@ -1,0 +1,73 @@
+/* ==========================================================================
+   BABSON DARK THEME
+   ========================================================================== */
+
+/* Babson Brand Colors */
+$babson-green               : #006644;
+$sherwood-green             : #9EB28F; /* Light Green for Dark Mode */
+$bright-gold                : #DDD055; /* Accent for Hover */
+$summer-nights              : #005172;
+$englewood-cliffs           : #6C6F70;
+$alfresco                   : #567B8A;
+
+/* Color codes used for the theme */
+$gray                       : $englewood-cliffs;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+
+/* Background setup */
+/* Using a very dark gray with a subtle cool tint to match Summer Nights/Green vibes */
+$background                 : #2a2d2f; 
+$background-light           : mix(#fff, $background, 15%);
+$background-lighter         : mix(#fff, $background, 25%);
+
+$text                       : #ffffff;
+
+/* Link Logic: Sherwood Green for readability, Gold for hover pop */
+$link                       : $sherwood-green;
+$link-dark                  : mix(#000, $link, 25%);
+$link-light                 : mix(#fff, $link, 25%);
+$link-hover                 : $bright-gold;
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : $alfresco;
+$notice-color               : $gray;
+$success-color              : $sherwood-green;
+$warning-color              : $bright-gold;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Babson Dark theme for the site */
+html[data-theme="dark"] {
+    --global-base-color                 : #{$background};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$background};
+    --global-border-color               : #{$light-gray};
+    --global-dark-border-color          : #{$background-light};
+    --global-code-background-color      : #363b3d;
+    --global-code-text-color            : #e6e6e6;
+    --global-fig-caption-color          : #{$light-gray};
+    
+    /* Primary Link Color: Sherwood Green (Light brand green) */
+    --global-link-color                 : #{$link};
+    
+    /* Hover Color: Bright Gold */
+    --global-link-color-hover           : #{$link-hover};
+    --global-link-color-visited         : #{$link-light};
+    
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$link};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #f3f3f3;
+    --global-thead-color                : #{$background-lighter};
+}

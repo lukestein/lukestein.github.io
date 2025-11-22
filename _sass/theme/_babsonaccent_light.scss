@@ -1,0 +1,63 @@
+/* ==========================================================================
+   BABSON LIGHT THEME
+   ========================================================================== */
+
+/* Babson Brand Colors */
+$babson-green               : #006644;
+$courtyard-green            : #597C31;
+$sherwood-green             : #9EB28F;
+$alfresco                   : #567B8A;
+$bright-gold                : #DDD055;
+$mango-punch                : #EEAF00;
+$summer-nights              : #005172;
+$englewood-cliffs           : #6C6F70;
+
+/* Color codes used for the theme */
+/* using Englewood Cliffs as the base gray */
+$gray                       : $englewood-cliffs; 
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : $alfresco;
+$notice-color               : $gray;
+$success-color              : $courtyard-green;
+$warning-color              : $mango-punch;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Babson Light theme for the site */
+:root {
+    --global-base-color                 : #{$gray};
+    --global-bg-color                   : #fff;
+    --global-footer-bg-color            : #f2f3f3;
+    --global-border-color               : #{$lighter-gray};
+    --global-dark-border-color          : #bdc1c4;
+    --global-code-background-color      : #fafafa;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
+    
+    /* Primary Link Color: Babson Green */
+    --global-link-color                 : #{$babson-green};
+    
+    /* Hover Color: Summer Nights (Deep Teal) */
+    --global-link-color-hover           : #{$summer-nights};
+    --global-link-color-visited         : mix(#fff, #{$babson-green}, 25%);  
+    
+    --global-masthead-link-color        : #{$dark-gray};
+    --global-masthead-link-color-hover  : #{$babson-green};    
+    --global-text-color                 : #{$dark-gray};
+    --global-text-color-light           : #{$light-gray};
+    --global-thead-color                : #{$lighter-gray};
+}
