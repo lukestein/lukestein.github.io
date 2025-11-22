@@ -6,24 +6,24 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-
-    <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0.25em;">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h3>
-    
-    {% if post.venue %}
-      <p style="margin-bottom: 0.25em;"><i>{{ post.venue }}</i></p>
+<li class="archive__item" style="margin-bottom: 1.25em; line-height: 1.4;">
+  <div style="margin-bottom: 0.1em;">
+    {% if post.link %}
+      <a href="{{ post.link }}" style="text-decoration: none; font-weight: 700;">{{ title }}</a>
+    {% else %}
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="text-decoration: none; font-weight: 700;">{{ title }}</a>
     {% endif %}
+  </div>
 
-    {% if post.citation %}
-      <p style="font-size: smaller; margin-bottom: 1em;">{{ post.citation }}</p>
-    {% endif %}
+  {% if post.venue and post.category != 'workingpapers' %}
+    <div style="font-style: italic; opacity: 0.85; margin-bottom: 0.1em;">
+      {{ post.venue }}
+    </div>
+  {% endif %}
 
-  </article>
-</div>
+  {% if post.citation %}
+    <div style="font-size: 0.9em; opacity: 0.7;">
+      {{ post.citation }}
+    </div>
+  {% endif %}
+</li>
