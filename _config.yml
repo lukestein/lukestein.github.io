@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "babsonaccent" # Currently available options are "default", "air", "babson", "babsonaccent"
-title                    : "Luke Stein, Ph.D."
+title                    : "Luke Stein"
 title_separator          : "-"
 name                     : &name "Luke Stein"
 description              : &description "Luke Stein's homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -24,7 +24,7 @@ repository               : "lukestein/lukestein.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Luke C.D. Stein"
+  name             : "Luke C.D. Stein, Ph.D."
   pronouns         : # example: "she/her"  
   bio              : "Assistant Professor of Finance<br>Babson College"
   location         : "Wellesley, MA, USA"

@@ -15,3 +15,5 @@ citation: 'Stein, L.C.D., Zhao, H., 2019. Independent executive directors: How d
 '
 ---
 Active corporate executives are a popular source of independent directors. Although their knowledge, expertise, and network can bring value to firms on whose boards they sit, independent executive directors may be more likely to be distracted than other directors due to their outside executive roles. Using newly constructed data linking independent directors to their employers, we identify periods when employers' poor performance may distract them from board service. We find that firms with distracted independent executive directors have lower performance and value, higher CEO compensation, reduced CEO turnover-performance sensitivity, lower earnings quality, and lower M&A performance. These adverse effects are mainly driven by distracted directors who sit on relevant committees, and are stronger for small boards.
+
+[SSRN version](https://ssrn.com/abstract=2946579)
