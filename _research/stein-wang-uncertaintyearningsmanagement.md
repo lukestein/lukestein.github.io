@@ -1,8 +1,8 @@
 ---
-collection: publications
+collection: research
 category: workingpapers
 title: "Economic uncertainty and earnings management"
-permalink: /publication/stein-wang-uncertaintyearningsmanagement
+permalink: /stein-wang-uncertaintyearningsmanagement
 excerpt: "In the presence of managerial short-termism and asymmetric information about skill and effort provision, firms may opportunistically shift earnings from uncertain to more certain times. We document that firms report more negative discretionary accruals when financial markets are less certain about their future prospects. Stock-price responses to earnings surprises are moderated when firm-level uncertainty is high, consistent with performance being attributed more to luck rather than skill and effort, which can create incentives to shift earnings toward lower-uncertainty periods. We show that the resulting opportunistic earnings management is concentrated in CEOs, firms, and periods where such incentives are likely to be strongest: (1) where CEO wealth is sensitive to change in the share price, (2) where announced earnings are particularly likely to be an important source of information about managerial ability and effort, and (3) before implementation of Sarbanes-Oxley made opportunistic earnings management more challenging. Our evidence highlights a novel channel through which uncertainty affects managerial decision making in the presence of agency conflicts."
 date: 2016-04-01
 venue: 'HBS Accounting & Management'
