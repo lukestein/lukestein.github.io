@@ -1,8 +1,8 @@
 ---
 title: "The visible hand: Race and online market outcomes"
-collection: publications
+collection: research
 category: manuscripts
-permalink: /publication/doleac-stein-visiblehand
+permalink: /doleac-stein-visiblehand
 #excerpt: ""
 excerpt: "We examine the effect of race on market outcomes by selling iPods through local online classified advertisements throughout the US. Each advertisement features a photograph including a dark or light‐skinned hand, or one with a wrist tattoo. Black sellers receive fewer and lower offers than white sellers, and the correspondence with black sellers indicates lower levels of trust. Black sellers’ outcomes are particularly poor in thin markets (suggesting that discrimination may not ‘survive’ competition among buyers) and those with the most racial isolation and property crime (consistent with channels through which statistical discrimination might operate)."
 date: 2013-11-01

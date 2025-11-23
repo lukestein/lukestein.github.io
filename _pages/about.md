@@ -18,14 +18,14 @@ Former finance faculty at Arizona State University’s W. P. Carey School of Bus
 
 ## Research
 
-([Full list with abstracts](/publications) or [pdf cv](/files/steincv.pdf))
+([Full list with abstracts](/research) or [pdf cv](/files/steincv.pdf))
 
 {% include base_path %}
 
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
+{% if site.research_category %}
+  {% for category in site.research_category  %}
     {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
+    {% for post in site.research reversed %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
@@ -49,7 +49,7 @@ Former finance faculty at Arizona State University’s W. P. Carey School of Bus
 {% else %}
 
 <ol>
-    {% for post in site.publications reversed %}
+    {% for post in site.research reversed %}
       {% include archive-single-compact.html %}
     {% endfor %}
 </ol>

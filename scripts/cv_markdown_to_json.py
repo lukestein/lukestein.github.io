@@ -248,8 +248,8 @@ def parse_skills(skills_text):
     
     return skills_entries
 
-def parse_publications(pub_dir):
-    """Parse publications from the _publications directory."""
+def parse_research(pub_dir):
+    """Parse publications from the _research directory."""
     publications = []
     
     if not os.path.exists(pub_dir):
@@ -387,7 +387,7 @@ def create_cv_json(md_file, config_file, repo_root, output_file):
     }
     
     # Add publications
-    cv_json["publications"] = parse_publications(os.path.join(repo_root, "_publications"))
+    cv_json["publications"] = parse_research(os.path.join(repo_root, "_research"))
     
     # Add talks
     cv_json["presentations"] = parse_talks(os.path.join(repo_root, "_talks"))
